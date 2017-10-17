@@ -11,6 +11,7 @@ import seedu.address.commons.events.BaseEvent;
 import seedu.address.commons.events.ui.NewResultAvailableEvent;
 import seedu.address.logic.Logic;
 import seedu.address.logic.commands.CommandResult;
+import seedu.address.logic.commands.OpenCommand;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.ui.util.KeyListenerUtil;
@@ -63,6 +64,11 @@ public class KeyListener {
             // Dummy action
             personListPanel.setFocus();
 
+        } else if (keys.get(OpenCommand.COMMAND_WORD).match(keyEvent)) {
+            //TODO: URGENT: Catch java.lang.NullPointerException for generic key calls that are not mapped. E.g. ctrl+G
+            commandBox.replaceText("open "); //TODO: Update with autocomplete. Just an example from Alex's new feature
+            commandBox.setFocus();
+            
         } else {
             // Execute key events for command words
             executeCommandKeyEvents(keyEvent);

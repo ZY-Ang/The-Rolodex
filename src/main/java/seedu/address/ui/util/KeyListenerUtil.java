@@ -6,6 +6,7 @@ import javafx.scene.input.KeyCombination;
 import seedu.address.logic.commands.ClearCommand;
 import seedu.address.logic.commands.HistoryCommand;
 import seedu.address.logic.commands.ListCommand;
+import seedu.address.logic.commands.OpenCommand;
 import seedu.address.logic.commands.RedoCommand;
 import seedu.address.logic.commands.UndoCommand;
 
@@ -25,6 +26,7 @@ public class KeyListenerUtil {
         keys.put(UndoCommand.COMMAND_WORD, KeyCombination.valueOf("Ctrl+Z"));
         keys.put(RedoCommand.COMMAND_WORD, KeyCombination.valueOf("Ctrl+Y"));
         keys.put(ListCommand.COMMAND_WORD, KeyCombination.valueOf("Ctrl+L"));
+        keys.put(OpenCommand.COMMAND_WORD, KeyCombination.valueOf("Ctrl+O"));
 
         return keys;
     }
