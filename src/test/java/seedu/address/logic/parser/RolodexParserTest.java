@@ -59,6 +59,7 @@ public class RolodexParserTest {
         assertEquals(new AddCommand(person), command);
     }
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandClear() throws Exception {
         assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD) instanceof ClearCommand);
@@ -67,6 +68,7 @@ public class RolodexParserTest {
             assertTrue(parser.parseCommand(abbreviation) instanceof ClearCommand);
         }
     }
+    //@@author
 
     @Test
     public void parseCommandDelete() throws Exception {
@@ -84,6 +86,7 @@ public class RolodexParserTest {
         assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);
     }
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandExit() throws Exception {
         assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD) instanceof ExitCommand);
@@ -92,6 +95,7 @@ public class RolodexParserTest {
             assertTrue(parser.parseCommand(abbreviation) instanceof ExitCommand);
         }
     }
+    //@@author
 
     //@@author ZY-Ang
     @Test
@@ -103,6 +107,7 @@ public class RolodexParserTest {
     }
     //@@author
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandHelp() throws Exception {
         assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD) instanceof HelpCommand);
@@ -111,7 +116,9 @@ public class RolodexParserTest {
             assertTrue(parser.parseCommand(abbreviation) instanceof HelpCommand);
         }
     }
+    //@@author
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandHistory() throws Exception {
         assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD) instanceof HistoryCommand);
@@ -127,7 +134,9 @@ public class RolodexParserTest {
             assertEquals(MESSAGE_UNKNOWN_COMMAND, pe.getMessage());
         }
     }
+    //@@author
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandList() throws Exception {
         assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD) instanceof ListCommand);
@@ -137,6 +146,7 @@ public class RolodexParserTest {
             assertTrue(parser.parseCommand(abbreviation) instanceof ListCommand);
         }
     }
+    //@@author
 
     @Test
     public void parseCommandSelect() throws Exception {
@@ -163,6 +173,7 @@ public class RolodexParserTest {
     }
     //@@author
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandRedoCommandWordReturnsRedoCommand() throws Exception {
         assertTrue(parser.parseCommand(RedoCommand.COMMAND_WORD) instanceof RedoCommand);
@@ -171,7 +182,9 @@ public class RolodexParserTest {
             assertTrue(parser.parseCommand(abbreviation) instanceof RedoCommand);
         }
     }
+    //@@author
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandUndoCommandWordReturnsUndoCommand() throws Exception {
         assertTrue(parser.parseCommand(UndoCommand.COMMAND_WORD) instanceof UndoCommand);
@@ -180,6 +193,7 @@ public class RolodexParserTest {
             assertTrue(parser.parseCommand(abbreviation) instanceof UndoCommand);
         }
     }
+    //@@author
 
     //@@author ZY-Ang
     @Test

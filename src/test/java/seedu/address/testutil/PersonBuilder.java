@@ -110,6 +110,7 @@ public class PersonBuilder {
         return this.person;
     }
 
+    //@@author ZY-Ang
     /**
      * Similar to the previous {@code build} except that this build returns a copy of the descriptor with tags
      * union-exclusive to the specified {@code otherSet} of {@code Tag}s.
@@ -121,5 +122,6 @@ public class PersonBuilder {
         copy.setTags(descriptor.getXorTags(otherSet));
         return copy;
     }
+    //@@author
 
 }

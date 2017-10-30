@@ -102,6 +102,7 @@ public class EditPersonDescriptorBuilder {
         return descriptor;
     }
 
+    //@@author ZY-Ang
     /**
      * Similar to the previous {@code build} except that this build returns a copy of the descriptor with tags
      * union-exclusive to the specified {@code otherSet} of {@code Tag}s.
@@ -111,4 +112,5 @@ public class EditPersonDescriptorBuilder {
         copy.setTags(copy.getXorTags(otherSet));
         return copy;
     }
+    //@@author
 }
