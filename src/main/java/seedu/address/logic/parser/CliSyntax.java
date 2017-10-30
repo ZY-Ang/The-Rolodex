@@ -72,5 +72,5 @@ public class CliSyntax {
                     SORT_ARGUMENT_PHONE_ASCENDING,
                     SORT_ARGUMENT_EMAIL_ASCENDING,
                     SORT_ARGUMENT_ADDRESS_ASCENDING));
-    //@@author
+                    //@@author
 }
