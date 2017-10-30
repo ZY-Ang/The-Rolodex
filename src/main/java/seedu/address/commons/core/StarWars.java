@@ -5,6 +5,7 @@ import java.io.InputStream;
 
 import org.apache.commons.net.telnet.TelnetClient;
 
+//@@author ZY-Ang
 /**
  * A star wars object that includes the streamer and telnet client source of the stream.
  * Obviously doesn't work if their server is down.

@@ -221,6 +221,7 @@ public class MainWindow extends UiPart<Region> {
         helpWindow.show();
     }
 
+    //@@author ZY-Ang
     /**
      * Opens the star wars window
      */
@@ -229,6 +230,7 @@ public class MainWindow extends UiPart<Region> {
         StarWarsWindow swWindow = new StarWarsWindow(starWars);
         swWindow.show();
     }
+    //@@author
 
     void show() {
         primaryStage.show();
@@ -248,9 +250,11 @@ public class MainWindow extends UiPart<Region> {
         handleHelp();
     }
 
+    //@@author ZY-Ang
     @Subscribe
     private void handleStarWarsEvent(StarWarsEvent event) {
         logger.info(LogsCenter.getEventHandlingLogMessage(event));
         handleStarWars(event.getStarWars());
     }
+    //@@author
 }
