@@ -12,7 +12,10 @@ ifndef::env-github[]
 - https://github.com/CS2103AUG2017-W11-B2/main[Github]
 endif::[]
 ```
+###### \NavigationMenu.adoc
+``` adoc
 
+```
 ###### \stylesheets\gh-pages.css
 ``` css
 #content #navbar {
