@@ -130,6 +130,7 @@ public class Person implements ReadOnlyPerson {
         return Collections.unmodifiableSet(tags.get().toSet());
     }
 
+    //@@author ZY-Ang
     /**
      * Returns whether a person's name contains some of the specified keywords,
      * within a Levenshtein distance of {@link #FIND_NAME_DISTANCE_TOLERANCE},
@@ -240,6 +241,7 @@ public class Person implements ReadOnlyPerson {
             return compareTo(otherPerson);
         }
     }
+    //@@author
 
     public ObjectProperty<UniqueTagList> tagProperty() {
         return tags;

@@ -22,11 +22,13 @@ public class FindCommandParserTest {
         assertParseFailure(parser, "     ", String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
     }
 
+    //@@author ZY-Ang
     @Test
     public void parseValidSortArgsEmptyDataArgsThrowsParseException() {
         assertParseFailure(parser, " " + SORT_ARGUMENT_NAME_DESCENDING,
                 String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
     }
+    //@@author
 
     @Test
     public void parseValidArgsReturnsFindCommand() {

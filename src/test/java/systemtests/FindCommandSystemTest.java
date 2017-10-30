@@ -26,6 +26,7 @@ import seedu.address.model.tag.Tag;
 
 public class FindCommandSystemTest extends RolodexSystemTest {
 
+    //@@author ZY-Ang
     @Test
     public void find() {
         /* Case: find multiple persons in rolodex, command with leading spaces and trailing spaces
@@ -170,6 +171,7 @@ public class FindCommandSystemTest extends RolodexSystemTest {
         assertCommandSuccess(command, expectedModel);
         assertSelectedCardUnchanged();
     }
+    //@@author
 
     /**
      * Executes {@code command} and verifies that the command box displays an empty string, the result display

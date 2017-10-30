@@ -24,13 +24,17 @@ public interface ReadOnlyPerson {
     Address getAddress();
     ObjectProperty<UniqueTagList> tagProperty();
     Set<Tag> getTags();
+    //@@author ZY-Ang
     boolean isNameCloseToAnyKeyword(List<String> keyWords);
     boolean isNameMatchAnyKeyword(List<String> keyWords);
     boolean isTagSetJointKeywordSet(List<String> keyWords);
     boolean isSearchKeyWordsMatchAnyData(List<String> keyWords);
+    //@@author
 
     int compareTo(ReadOnlyPerson otherPerson);
+    //@@author ZY-Ang
     int compareTo(ReadOnlyPerson otherPerson, SortArgument sortArgument);
+    //@@author
 
     /**
      * Returns true if both have the same state. (interfaces cannot override .equals)

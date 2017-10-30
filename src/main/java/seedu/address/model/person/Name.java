@@ -45,12 +45,14 @@ public class Name {
         return test.matches(NAME_VALIDATION_REGEX);
     }
 
+    //@@author ZY-Ang
     /**
      * Retrieves a listing of every word in the name, in order.
      */
     public List<String> getWordsInName() {
         return Arrays.asList(fullName.split("\\s+"));
     }
+    //@@author
 
     @Override
     public String toString() {
