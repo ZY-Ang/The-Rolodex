@@ -13,8 +13,10 @@ import seedu.address.commons.events.ui.ExitAppRequestEvent;
 public class ExitCommand extends Command {
 
     public static final String COMMAND_WORD = "exit";
+    //@@author ZY-Ang
     public static final Set<String> COMMAND_WORD_ABBREVIATIONS =
             new HashSet<>(Arrays.asList(COMMAND_WORD, "quit", "close", "bye", "esc"));
+    //@@author
 
     public static final String MESSAGE_EXIT_ACKNOWLEDGEMENT = "Exiting Rolodex as requested ...";
 

@@ -22,8 +22,10 @@ import seedu.address.model.person.exceptions.DuplicatePersonException;
 public class AddCommand extends UndoableCommand {
 
     public static final String COMMAND_WORD = "add";
+    //@@author ZY-Ang
     public static final Set<String> COMMAND_WORD_ABBREVIATIONS =
             new HashSet<>(Arrays.asList(COMMAND_WORD, "a", "+"));
+    //@@author
     public static final String COMMAND_HOTKEY = "Ctrl+A";
     public static final String FORMAT = "add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS";
 

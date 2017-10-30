@@ -15,9 +15,11 @@ public class Prefix {
         return prefix;
     }
 
+    //@@author ZY-Ang
     public String concat(Postfix postfix) {
         return prefix.concat(postfix.toString());
     }
+    //@@author
 
     public String toString() {
         return getPrefix();

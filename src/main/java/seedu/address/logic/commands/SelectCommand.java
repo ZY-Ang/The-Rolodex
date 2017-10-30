@@ -18,8 +18,10 @@ import seedu.address.model.person.ReadOnlyPerson;
 public class SelectCommand extends Command {
 
     public static final String COMMAND_WORD = "select";
+    //@@author ZY-Ang
     public static final Set<String> COMMAND_WORD_ABBREVIATIONS =
             new HashSet<>(Arrays.asList(COMMAND_WORD, "s"));
+    //@@author
     public static final String COMMAND_HOTKEY = "Ctrl+S";
     public static final String FORMAT = "select INDEX";
 

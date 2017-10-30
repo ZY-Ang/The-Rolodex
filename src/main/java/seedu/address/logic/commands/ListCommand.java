@@ -18,16 +18,20 @@ import seedu.address.logic.parser.SortArgument;
 public class ListCommand extends Command {
 
     public static final String COMMAND_WORD = "list";
+    //@@author ZY-Ang
     public static final Set<String> COMMAND_WORD_ABBREVIATIONS =
             new HashSet<>(Arrays.asList(COMMAND_WORD, "l", "show", "display"));
+    //@@author
     public static final String COMMAND_HOTKEY = "Ctrl+L";
 
+    //@@author ZY-Ang
     public static final String MESSAGE_USAGE = COMMAND_WORD + ":"
             + "Displays all persons in the rolodex, "
             + "sorted by the specified sort order or the default sort order." + "\n"
             + "Parameters: " + MESSAGE_SORT_USAGE + "\n"
             + "Example: " + COMMAND_WORD + " "
             + SORT_ARGUMENT_NAME_DEFAULT +  " " + SORT_ARGUMENT_PHONE_DESCENDING;
+    //@@author
 
     public static final String MESSAGE_SUCCESS = "Listed all persons";
 
@@ -37,10 +41,12 @@ public class ListCommand extends Command {
         this.sortArguments = sortArguments;
     }
 
+    //@@author ZY-Ang
     @Override
     public CommandResult execute() {
         model.updateSortComparator(sortArguments);
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
         return new CommandResult(MESSAGE_SUCCESS);
     }
+    //@@author
 }

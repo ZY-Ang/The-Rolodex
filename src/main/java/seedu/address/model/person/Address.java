@@ -58,8 +58,10 @@ public class Address {
         return value.hashCode();
     }
 
+    //@@author ZY-Ang
     public int compareTo(Address other) {
         return toString().compareTo(other.toString());
     }
+    //@@author
 
 }

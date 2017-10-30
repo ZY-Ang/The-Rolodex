@@ -30,6 +30,7 @@ public class FindCommandParserTest {
     }
     //@@author
 
+    //@@author ZY-Ang
     @Test
     public void parseValidArgsReturnsFindCommand() {
         // no leading and trailing whitespaces
@@ -42,5 +43,6 @@ public class FindCommandParserTest {
         // multiple whitespaces between keywords
         assertParseSuccess(parser, " \n Alice \n \t Bob  \t", expectedFindCommand);
     }
+    //@@author
 
 }

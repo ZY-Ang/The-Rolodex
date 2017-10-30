@@ -145,6 +145,7 @@ public class RolodexParserTest {
         assertEquals(new SelectCommand(INDEX_FIRST_PERSON), command);
     }
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandOpen() throws Exception {
         String validRolodexFile = "valid/filePath/valid.rldx";
@@ -160,6 +161,7 @@ public class RolodexParserTest {
                 NewCommand.COMMAND_WORD + " " + validRolodexFile);
         assertEquals(new NewCommand(validRolodexFile), command);
     }
+    //@@author
 
     @Test
     public void parseCommandRedoCommandWordReturnsRedoCommand() throws Exception {
@@ -179,6 +181,7 @@ public class RolodexParserTest {
         }
     }
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandStarWarsCommandWordReturnsStarWarsCommand() throws Exception {
         assertTrue(parser.parseCommand(StarWarsCommand.COMMAND_WORD) instanceof StarWarsCommand);
@@ -187,6 +190,7 @@ public class RolodexParserTest {
             assertTrue(parser.parseCommand(abbreviation) instanceof StarWarsCommand);
         }
     }
+    //@@author
 
     @Test
     public void parseCommandUnrecognisedInputThrowsParseException() throws Exception {
@@ -202,6 +206,7 @@ public class RolodexParserTest {
         parser.parseCommand("unknownCommand");
     }
 
+    //@@author ZY-Ang
     @Test
     public void parseCommandListInvalidArgumentThrowsParseException() throws Exception {
         thrown.expect(ParseException.class);
@@ -218,4 +223,5 @@ public class RolodexParserTest {
             assertTrue(Collections.disjoint(commandAbbreviationPair.getKey(), commandAbbreviationPair.getValue()));
         }
     }
+    //@@author
 }

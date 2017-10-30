@@ -173,6 +173,7 @@ public class FindCommandTest {
     }
     //@@author
 
+    //@@author ZY-Ang
     /**
      * Parses {@code userInput} into a {@code FindCommand}.
      */
@@ -192,6 +193,7 @@ public class FindCommandTest {
         command.setData(model, new CommandHistory(), new UndoRedoStack());
         return command;
     }
+    //@@author
 
     /**
      * Asserts that {@code command} is successfully executed, and<br>

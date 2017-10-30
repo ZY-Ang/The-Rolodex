@@ -42,8 +42,10 @@ public interface Model {
     /** Removes the given tag from all persons in the list */
     void removeTag(Tag tag) throws DuplicatePersonException, PersonNotFoundException;
 
+    //@@author ZY-Ang
     /** Returns an unmodifiable view of the filtered person list */
     ObservableList<ReadOnlyPerson> getLatestPersonList();
+    //@@author
 
     /**
      * Updates the filter of the filtered person list to filter by the given {@code predicate}.
@@ -51,10 +53,12 @@ public interface Model {
      */
     void updateFilteredPersonList(Predicate<ReadOnlyPerson> predicate);
 
+    //@@author ZY-Ang
     /**
      * Updates the sortComparator of the model to sort by the given ordered {@code sortArguments}.
      * @throws NullPointerException if {@code sortArguments} is null.
      */
     void updateSortComparator(List<SortArgument> sortArguments);
+    //@@author
 
 }

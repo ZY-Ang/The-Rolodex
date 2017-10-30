@@ -37,6 +37,7 @@ public class ListCommandTest {
     private Model model;
     private Model expectedModel;
     private ListCommand listCommand;
+    //@@author ZY-Ang
     private ListCommand listCommandNameDefault;
     private ListCommand listCommandNameDescending;
     private ListCommand listCommandNameAscending;
@@ -86,6 +87,7 @@ public class ListCommandTest {
         listCommandAddressAscending = new ListCommand(Arrays.asList(SORT_ARGUMENT_ADDRESS_ASCENDING));
         listCommandAddressAscending.setData(model, new CommandHistory(), new UndoRedoStack());
     }
+    //@@author
 
     @Test
     public void executeListIsNotFilteredShowsSameList() {
@@ -98,6 +100,7 @@ public class ListCommandTest {
         assertCommandSuccess(listCommand, model, ListCommand.MESSAGE_SUCCESS, expectedModel);
     }
 
+    //@@author ZY-Ang
     @Test
     public void executeListIsSortedByNameDefaultShowsSorted() {
         sortAllPersons(expectedModel, SORT_ARGUMENT_NAME_DEFAULT);
@@ -169,4 +172,5 @@ public class ListCommandTest {
         sortAllPersons(expectedModel, SORT_ARGUMENT_ADDRESS_ASCENDING);
         assertCommandSuccess(listCommandAddressAscending, model, ListCommand.MESSAGE_SUCCESS, expectedModel);
     }
+    //@@author
 }

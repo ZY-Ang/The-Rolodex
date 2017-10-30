@@ -13,8 +13,10 @@ import seedu.address.commons.events.ui.ShowHelpRequestEvent;
 public class HelpCommand extends Command {
 
     public static final String COMMAND_WORD = "help";
+    //@@author ZY-Ang
     public static final Set<String> COMMAND_WORD_ABBREVIATIONS =
             new HashSet<>(Arrays.asList(COMMAND_WORD, "h", "assist", "faq"));
+    //@@author
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Shows program usage instructions.\n"
             + "Example: " + COMMAND_WORD;

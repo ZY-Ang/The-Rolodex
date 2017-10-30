@@ -33,6 +33,7 @@ public class ModelManager extends ComponentManager implements Model {
 
     private final Rolodex rolodex;
     private final FilteredList<ReadOnlyPerson> filteredPersons;
+    //@@author ZY-Ang
     private final SortedList<ReadOnlyPerson> sortedPersons;
     private Predicate<ReadOnlyPerson> predicate;
 
@@ -50,6 +51,7 @@ public class ModelManager extends ComponentManager implements Model {
         sortedPersons = new SortedList<>(filteredPersons);
         updateSortComparator(null);
     }
+    //@@author
 
     public ModelManager() {
         this(new Rolodex(), new UserPrefs());
@@ -77,6 +79,7 @@ public class ModelManager extends ComponentManager implements Model {
         indicateRolodexChanged();
     }
 
+    //@@author ZY-Ang
     @Override
     public synchronized void addPerson(ReadOnlyPerson person) throws DuplicatePersonException {
         rolodex.addPerson(person);
@@ -84,6 +87,7 @@ public class ModelManager extends ComponentManager implements Model {
         updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
         indicateRolodexChanged();
     }
+    //@@author
 
     @Override
     public void updatePerson(ReadOnlyPerson target, ReadOnlyPerson editedPerson)
@@ -107,6 +111,7 @@ public class ModelManager extends ComponentManager implements Model {
         }
     }
 
+    //@@author ZY-Ang
     //=========== Latest Person List Accessors =============================================================
 
     /**
@@ -117,6 +122,7 @@ public class ModelManager extends ComponentManager implements Model {
     public ObservableList<ReadOnlyPerson> getLatestPersonList() {
         return FXCollections.unmodifiableObservableList(sortedPersons.filtered(predicate));
     }
+    //@@author
 
     @Override
     public void updateFilteredPersonList(Predicate<ReadOnlyPerson> predicate) {
@@ -125,6 +131,7 @@ public class ModelManager extends ComponentManager implements Model {
         this.predicate = predicate;
     }
 
+    //@@author ZY-Ang
     @Override
     public void updateSortComparator(List<SortArgument> sortArguments) {
         sortedPersons.setComparator(generateComparator(sortArguments));
@@ -148,5 +155,6 @@ public class ModelManager extends ComponentManager implements Model {
                 && sortedPersons.equals(other.sortedPersons)
                 && filteredPersons.equals(other.filteredPersons);
     }
+    //@@author
 
 }

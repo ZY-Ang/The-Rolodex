@@ -45,10 +45,12 @@ public class LogicManager extends ComponentManager implements Logic {
         }
     }
 
+    //@@author ZY-Ang
     @Override
     public ObservableList<ReadOnlyPerson> getLatestPersonList() {
         return model.getLatestPersonList();
     }
+    //@@author
 
     @Override
     public ListElementPointer getHistorySnapshot() {

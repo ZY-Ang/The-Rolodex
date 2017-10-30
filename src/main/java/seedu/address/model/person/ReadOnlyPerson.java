@@ -31,8 +31,8 @@ public interface ReadOnlyPerson {
     boolean isSearchKeyWordsMatchAnyData(List<String> keyWords);
     //@@author
 
-    int compareTo(ReadOnlyPerson otherPerson);
     //@@author ZY-Ang
+    int compareTo(ReadOnlyPerson otherPerson);
     int compareTo(ReadOnlyPerson otherPerson, SortArgument sortArgument);
     //@@author
 

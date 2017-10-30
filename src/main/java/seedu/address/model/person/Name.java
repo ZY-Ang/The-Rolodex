@@ -71,8 +71,10 @@ public class Name {
         return fullName.hashCode();
     }
 
+    //@@author ZY-Ang
     public int compareTo(Name other) {
         return toString().compareTo(other.toString());
     }
+    //@@author
 
 }

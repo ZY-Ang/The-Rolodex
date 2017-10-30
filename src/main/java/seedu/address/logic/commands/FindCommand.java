@@ -20,8 +20,10 @@ import seedu.address.model.person.PersonDataContainsKeywordsPredicate;
 public class FindCommand extends Command {
 
     public static final String COMMAND_WORD = "find";
+    //@@author ZY-Ang
     public static final Set<String> COMMAND_WORD_ABBREVIATIONS =
             new HashSet<>(Arrays.asList(COMMAND_WORD, "f", "filter", "search"));
+    //@@author
     public static final String COMMAND_HOTKEY = "Ctrl+f";
     public static final String FORMAT = "find KEYWORD(S)";
 

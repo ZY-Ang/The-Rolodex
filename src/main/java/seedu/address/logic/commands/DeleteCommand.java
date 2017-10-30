@@ -17,8 +17,10 @@ import seedu.address.model.person.exceptions.PersonNotFoundException;
 public class DeleteCommand extends UndoableCommand {
 
     public static final String COMMAND_WORD = "delete";
+    //@@author ZY-Ang
     public static final Set<String> COMMAND_WORD_ABBREVIATIONS =
             new HashSet<>(Arrays.asList(COMMAND_WORD, "d", "-"));
+    //@@author
     public static final String COMMAND_HOTKEY = "Ctrl+Shift+D";
     public static final String FORMAT = "delete INDEX";
 

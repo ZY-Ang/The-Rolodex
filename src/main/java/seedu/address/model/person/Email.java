@@ -54,8 +54,10 @@ public class Email {
         return value.hashCode();
     }
 
+    //@@author ZY-Ang
     public int compareTo(Email other) {
         return toString().compareTo(other.toString());
     }
+    //@@author
 
 }

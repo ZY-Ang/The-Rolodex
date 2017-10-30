@@ -97,6 +97,7 @@ public class StringUtil {
         return costs[b.length()];
     }
 
+    //@@author ZY-Ang
     public static String appendCrotchets(String s) {
         return "[" + s + "]";
     }
@@ -104,4 +105,5 @@ public class StringUtil {
     public static String replaceBackslashes(String s) {
         return s.replace('\\', '/');
     }
+    //@@author
 }
