@@ -42,10 +42,12 @@ public class StorageManagerTest {
         return testFolder.getRoot().getPath() + fileName;
     }
 
+    //@@author ZY-Ang
     @Test
     public void assertGetUserPrefsFilePath() {
         assertEquals(storageManager.getUserPrefsFilePath(), userPrefsStorage.getUserPrefsFilePath());
     }
+    //@@author
 
     @Test
     public void prefsReadSave() throws Exception {
@@ -88,6 +90,7 @@ public class StorageManagerTest {
         assertTrue(eventsCollectorRule.eventsCollector.getMostRecent() instanceof DataSavingExceptionEvent);
     }
 
+    //@@author ZY-Ang
     @Test
     public void assertSetNewRolodexStorageDifferentStorage() {
         RolodexStorage currentRoldexStorage = storageManager.getExistingRolodexStorage();
@@ -95,6 +98,7 @@ public class StorageManagerTest {
         assertFalse(currentRoldexStorage.getRolodexFilePath().equals(
                 storageManager.getExistingRolodexStorage().getRolodexFilePath()));
     }
+    //@@author
 
 
     /**
@@ -112,6 +116,7 @@ public class StorageManagerTest {
         }
     }
 
+    //@@author ZY-Ang
     @Test
     public void assertEqualsSameInstanceReturnsTrue() {
         assertTrue(storageManager.equals(storageManager));
@@ -121,6 +126,7 @@ public class StorageManagerTest {
     public void assertEqualsNotStorageManagerInstanceReturnsFalse() {
         assertFalse(storageManager.equals(new Object()));
     }
+    //@@author
 
 
 }

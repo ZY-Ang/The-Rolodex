@@ -15,7 +15,9 @@ import seedu.address.commons.util.FxViewUtil;
  */
 public class HelpWindow extends UiPart<Region> {
 
+    //@@author ZY-Ang
     public static final String HELP_FILE_PATH = "/docs/Help.html";
+    //@@author
 
     private static final Logger logger = LogsCenter.getLogger(HelpWindow.class);
     private static final String ICON = "/images/help_icon.png";

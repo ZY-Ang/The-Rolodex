@@ -77,6 +77,7 @@ public class MainApp extends Application {
         initEventsCenter();
     }
 
+    //@@author ZY-Ang
     /**
      * Reloads the current Rolodex application with new data at the specified filePath.
      * @param newRolodexPath string path of the new Rolodex to be loaded.
@@ -95,6 +96,7 @@ public class MainApp extends Application {
         model.resetData(modelToBeLoaded.getRolodex());
         EventsCenter.getInstance().post(new RolodexChangedDirectoryEvent(newRolodexPath));
     }
+    //@@author
 
     private String getApplicationParameter(String parameterName) {
         Map<String, String> applicationParameters = getParameters().getNamed();
@@ -221,6 +223,7 @@ public class MainApp extends Application {
         System.exit(0);
     }
 
+    //@@author ZY-Ang
     @Subscribe
     public void handleOpenNewRolodexRequestEvent(OpenRolodexRequestEvent event) {
         logger.info(LogsCenter.getEventHandlingLogMessage(event));
@@ -244,6 +247,7 @@ public class MainApp extends Application {
             this.stop();
         }
     }
+    //@@author
 
     @Subscribe
     public void handleExitAppRequestEvent(ExitAppRequestEvent event) {

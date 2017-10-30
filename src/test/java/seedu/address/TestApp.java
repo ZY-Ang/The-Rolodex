@@ -33,8 +33,10 @@ import systemtests.ModelHelper;
 public class TestApp extends MainApp {
 
     public static final String SAVE_LOCATION_FOR_TESTING = TestUtil.getFilePathInSandboxFolder("sampleData.rldx");
+    //@@author ZY-Ang
     public static final String SECONDARY_SAVE_LOCATION = TestUtil.getFilePathInSandboxFolder("tempRolodex.rldx");
     public static final String APP_TITLE = "Test App";
+    //@@author
 
     protected static final String DEFAULT_PREF_FILE_LOCATION_FOR_TESTING =
             TestUtil.getFilePathInSandboxFolder("pref_testing.json");
@@ -106,6 +108,7 @@ public class TestApp extends MainApp {
         return copy;
     }
 
+    //@@author ZY-Ang
     /**
      * Returns a defensive copy of the storage.
      */
@@ -125,6 +128,7 @@ public class TestApp extends MainApp {
         UserPrefs copy = initPrefs(userPrefsStorage);
         return copy;
     }
+    //@@author
 
     @Override
     public void start(Stage primaryStage) {

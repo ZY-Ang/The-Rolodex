@@ -65,6 +65,7 @@ public class XmlRolodexStorage implements RolodexStorage {
         saveRolodex(rolodex, filePath);
     }
 
+    //@@author ZY-Ang
     /**
      * Similar to {@link #saveRolodex(ReadOnlyRolodex)}
      * @param filePath location of the data. Cannot be null
@@ -98,5 +99,6 @@ public class XmlRolodexStorage implements RolodexStorage {
         XmlRolodexStorage other = (XmlRolodexStorage) obj;
         return filePath.equals(other.filePath);
     }
+    //@@author
 
 }

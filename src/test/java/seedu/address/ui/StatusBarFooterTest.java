@@ -23,14 +23,18 @@ import seedu.address.model.Rolodex;
 
 public class StatusBarFooterTest extends GuiUnitTest {
 
+    //@@author ZY-Ang
     private static final String STUB_SAVE_LOCATION = "Stub" + ROLODEX_FILE_EXTENSION;
     private static final String STUB_SAVE_LOCATION_NEW = "NewStub" + ROLODEX_FILE_EXTENSION;
+    //@@author
     private static final String RELATIVE_PATH = "./";
 
+    //@@author ZY-Ang
     private static final RolodexChangedEvent EVENT_STUB_CHANGE_DATA =
             new RolodexChangedEvent(new Rolodex());
     private static final RolodexChangedDirectoryEvent EVENT_STUB_CHANGE_DIRECTORY =
             new RolodexChangedDirectoryEvent(RELATIVE_PATH + STUB_SAVE_LOCATION_NEW);
+    //@@author
 
     private static final Clock originalClock = StatusBarFooter.getClock();
     private static final Clock injectedClock = Clock.fixed(Instant.now(), ZoneId.systemDefault());
@@ -57,6 +61,7 @@ public class StatusBarFooterTest extends GuiUnitTest {
         statusBarFooterHandle = new StatusBarFooterHandle(statusBarFooter.getRoot());
     }
 
+    //@@author ZY-Ang
     @Test
     public void display() {
         // initial state
@@ -72,6 +77,7 @@ public class StatusBarFooterTest extends GuiUnitTest {
         assertStatusBarContent(RELATIVE_PATH + STUB_SAVE_LOCATION_NEW,
                 String.format(SYNC_STATUS_UPDATED, new Date(injectedClock.millis()).toString()));
     }
+    //@@author
 
     /**
      * Asserts that the save location matches that of {@code expectedSaveLocation}, and the

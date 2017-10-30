@@ -127,6 +127,7 @@ public class XmlRolodexStorageTest {
         saveRolodex(new Rolodex(), null);
     }
 
+    //@@author ZY-Ang
     @Test
     public void saveRolodexInvalidStorageExtensionThrowsInvalidExtensionException() throws IOException {
         String invalidExtensionedFilePath = "invalid/extension.megaPoop";
@@ -148,6 +149,7 @@ public class XmlRolodexStorageTest {
         XmlRolodexStorage xmlRolodexStorage = new XmlRolodexStorage(pefsFilePath);
         assertFalse(xmlRolodexStorage.equals(new Object()));
     }
+    //@@author
 
 
 }

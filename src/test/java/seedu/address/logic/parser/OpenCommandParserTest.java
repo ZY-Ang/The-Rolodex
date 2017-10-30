@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import seedu.address.logic.commands.OpenCommand;
 
+//@@author ZY-Ang
 public class OpenCommandParserTest {
 
     private OpenCommandParser parser = new OpenCommandParser();

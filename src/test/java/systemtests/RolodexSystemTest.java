@@ -143,6 +143,7 @@ public abstract class RolodexSystemTest {
         assertListMatching(getPersonListPanel(), expectedModel.getLatestPersonList());
     }
 
+    //@@author ZY-Ang
     /**
      * Asserts that the {@code CommandBox} displays {@code expectedCommandInput}, the {@code ResultDisplay} displays
      * {@code expectedResultMessage}, the storage contains the same person objects as {@code expectedStorage},
@@ -155,6 +156,7 @@ public abstract class RolodexSystemTest {
         assertEquals(expectedResultMessage, getResultDisplay().getText());
         assertEquals(expectedStorage, getStorage());
     }
+    //@@author
 
     /**
      * Calls {@code PersonListPanelHandle} and {@code StatusBarFooterHandle} to remember
@@ -214,6 +216,7 @@ public abstract class RolodexSystemTest {
         assertFalse(handle.isSyncStatusChanged());
     }
 
+    //@@author ZY-Ang
     /**
      * Asserts that the status bar directory has changed to {@code expectedSaveLocation}
      */
@@ -221,6 +224,7 @@ public abstract class RolodexSystemTest {
         StatusBarFooterHandle handle = getStatusBarFooter();
         assertEquals(handle.getSaveLocation(), expectedSaveLocation);
     }
+    //@@author
 
     /**
      * Asserts that only the sync status in the status bar was changed to the timing of
@@ -256,6 +260,7 @@ public abstract class RolodexSystemTest {
         return testApp.getModel();
     }
 
+    //@@author ZY-Ang
     /**
      * Returns a defensive copy of the current storage.
      */
@@ -269,4 +274,5 @@ public abstract class RolodexSystemTest {
     protected UserPrefs getUserPrefs() {
         return testApp.getUserPrefs();
     }
+    //@@author
 }

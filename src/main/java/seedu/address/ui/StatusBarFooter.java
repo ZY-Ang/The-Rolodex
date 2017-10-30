@@ -80,8 +80,10 @@ public class StatusBarFooter extends UiPart<Region> {
         setSyncStatus(String.format(SYNC_STATUS_UPDATED, lastUpdated));
     }
 
+    //@@author ZY-Ang
     @Subscribe
     public void handleRolodexChangedLocationEvent(RolodexChangedDirectoryEvent rcde) {
         setSaveLocation(rcde.getFilePath());
     }
+    //@@author
 }

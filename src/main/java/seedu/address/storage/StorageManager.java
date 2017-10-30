@@ -77,6 +77,7 @@ public class StorageManager extends ComponentManager implements Storage {
         rolodexStorage.saveRolodex(rolodex, filePath);
     }
 
+    //@@author ZY-Ang
     @Override
     public RolodexStorage getExistingRolodexStorage() {
         return rolodexStorage;
@@ -86,6 +87,7 @@ public class StorageManager extends ComponentManager implements Storage {
     public void setNewRolodexStorage(RolodexStorage newRolodexStorage) {
         rolodexStorage = newRolodexStorage;
     }
+    //@@author
 
     @Override
     @Subscribe
@@ -98,6 +100,7 @@ public class StorageManager extends ComponentManager implements Storage {
         }
     }
 
+    //@@author ZY-Ang
     //=========== State accessor =============================================================
 
     @Override
@@ -117,5 +120,6 @@ public class StorageManager extends ComponentManager implements Storage {
         return rolodexStorage.equals(other.rolodexStorage)
                 && userPrefsStorage.equals(other.userPrefsStorage);
     }
+    //@@author
 
 }

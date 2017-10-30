@@ -133,6 +133,7 @@ public class JsonUserPrefsStorageTest {
         assertEquals(original, readBack);
     }
 
+    //@@author ZY-Ang
     @Test
     public void assertEqualsSameInstanceReturnsTrue() {
         String pefsFilePath = testFolder.getRoot() + File.separator + "TempPrefs.json";
@@ -146,5 +147,6 @@ public class JsonUserPrefsStorageTest {
         JsonUserPrefsStorage jsonUserPrefsStorage = new JsonUserPrefsStorage(pefsFilePath);
         assertFalse(jsonUserPrefsStorage.equals(new Object()));
     }
+    //@@author
 
 }

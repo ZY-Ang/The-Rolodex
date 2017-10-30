@@ -29,9 +29,11 @@ public interface Storage extends RolodexStorage, UserPrefsStorage {
     @Override
     void saveRolodex(ReadOnlyRolodex rolodex) throws IOException;
 
+    //@@author ZY-Ang
     RolodexStorage getExistingRolodexStorage();
 
     void setNewRolodexStorage(RolodexStorage storage);
+    //@@author
 
     /**
      * Saves the current version of the Rolodex to the hard disk.

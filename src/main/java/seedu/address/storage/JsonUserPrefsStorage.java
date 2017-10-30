@@ -42,6 +42,7 @@ public class JsonUserPrefsStorage implements UserPrefsStorage {
         JsonUtil.saveJsonFile(userPrefs, filePath);
     }
 
+    //@@author ZY-Ang
     @Override
     public boolean equals(Object obj) {
         // short circuit if same object
@@ -58,5 +59,6 @@ public class JsonUserPrefsStorage implements UserPrefsStorage {
         JsonUserPrefsStorage other = (JsonUserPrefsStorage) obj;
         return filePath.equals(other.filePath);
     }
+    //@@author
 
 }

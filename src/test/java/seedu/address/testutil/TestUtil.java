@@ -54,10 +54,12 @@ public class TestUtil {
         return model.getRolodex().getPersonList().get(index.getZeroBased());
     }
 
+    //@@author ZY-Ang
     /**
      * Returns a random file path with supplied extension in the sandbox folder.
      */
     public static String generateRandomSandboxDirectory(String extension) {
         return replaceBackslashes(getFilePathInSandboxFolder(Double.toString(Math.random()).concat(extension)));
     }
+    //@@author
 }
