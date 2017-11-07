@@ -35,9 +35,7 @@ public class FindCommandParserTest {
         assertParseFailure(parser, " " + SORT_ARGUMENT_NAME_DESCENDING,
                 String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
     }
-    //@@author
 
-    //@@author ZY-Ang
     @Test
     public void parseValidArgsReturnsFindCommand() {
         // no leading and trailing whitespaces
@@ -50,7 +48,6 @@ public class FindCommandParserTest {
         // multiple whitespaces between keywords
         assertParseSuccess(parser, " \n Alice \n \t Bob  \t", expectedFindCommand);
     }
-    //@@author
 
     @Test
     public void parseArgumentsNullStringThrowsNullPointerException() throws Exception {
@@ -69,5 +66,6 @@ public class FindCommandParserTest {
         assertEquals(" some args", FindCommandParser.parseArguments("some args"));
         assertEquals(" some args", FindCommandParser.parseArguments("    some args"));
     }
+    //@@author
 
 }

@@ -42,6 +42,7 @@ public class RemarkCommandParserTest {
         assertParseFailure(parser, RemarkCommand.COMMAND_WORD, expectedMessage);
     }
 
+    //@@author ZY-Ang
     @Test
     public void parseArgumentsNoIndexFailueThrowsParseException() throws Exception {
         assertTrue(null == RemarkCommandParser.parseArguments("rmk", "no index here!"));
@@ -59,5 +60,6 @@ public class RemarkCommandParserTest {
         assertEquals(" 1 r/", RemarkCommandParser.parseArguments("rmk1", ""));
         assertEquals(" 7 r/", RemarkCommandParser.parseArguments("rmk7", ""));
     }
+    //@@author
 
 }

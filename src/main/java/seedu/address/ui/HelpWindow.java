@@ -46,6 +46,7 @@ public class HelpWindow extends UiPart<Region> {
 
     private final Stage dialogStage;
 
+    //@@author ZY-Ang
     public HelpWindow() {
         super(FXML);
 
@@ -82,6 +83,7 @@ public class HelpWindow extends UiPart<Region> {
         engine.executeScript("$('body').removeHighlight()");
         txtSearch.clear();
     }
+    //@@author
 
     /**
      * Shows the help window.

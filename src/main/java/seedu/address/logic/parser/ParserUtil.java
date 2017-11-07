@@ -125,6 +125,7 @@ public class ParserUtil {
         }
     }
 
+    //@@author ZY-Ang
     /**
      * Returns the first integer found in a {@code String}.
      * @param value to be parsed.
@@ -286,4 +287,5 @@ public class ParserUtil {
                 .concat(" ")
                 .concat(value.substring(value.indexOf(firstEmail) + firstEmail.length()).trim()).trim();
     }
+    //@@author
 }

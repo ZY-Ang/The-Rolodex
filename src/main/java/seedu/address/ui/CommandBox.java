@@ -188,6 +188,7 @@ public class CommandBox extends UiPart<Region> {
         commandTextField.setText(text);
     }
 
+    //@@author ZY-Ang
     /**
      * Handles the Enter button pressed event.
      */
@@ -217,6 +218,7 @@ public class CommandBox extends UiPart<Region> {
             raise(new NewResultAvailableEvent(e.getMessage()));
         }
     }
+    //@@author
 
     /**
      * Initializes the history snapshot.

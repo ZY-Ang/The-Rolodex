@@ -43,7 +43,6 @@ public class FindCommandParser implements Parser<FindCommand> {
 
         return new FindCommand(new PersonDataContainsKeywordsPredicate(dataKeywords), sortArgumentList);
     }
-    //@@author
 
     /**
      * Returns a formatted argument string given unformatted {@code rawArgs}
@@ -57,5 +56,6 @@ public class FindCommandParser implements Parser<FindCommand> {
         }
         return null;
     }
+    //@@author
 
 }

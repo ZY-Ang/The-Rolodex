@@ -38,6 +38,7 @@ public class RemarkCommandParser implements Parser<RemarkCommand> {
         return new RemarkCommand(index, new Remark(remark));
     }
 
+    //@@author ZY-Ang
     /**
      * Returns a formatted argument string given unformatted
      * {@code commandWord} and {@code rawArgs}
@@ -56,4 +57,5 @@ public class RemarkCommandParser implements Parser<RemarkCommand> {
         }
         return null;
     }
+    //@@author
 }

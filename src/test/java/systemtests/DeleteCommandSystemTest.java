@@ -176,6 +176,7 @@ public class DeleteCommandSystemTest extends RolodexSystemTest {
         assertStatusBarUnchangedExceptSyncStatus();
     }
 
+    //@@author ZY-Ang
     /**
      * Executes {@code command} and in addition,<br>
      * 1. Asserts that the command box displays {@code command}.<br>
@@ -211,4 +212,5 @@ public class DeleteCommandSystemTest extends RolodexSystemTest {
         assertCommandBoxShowsErrorStyle();
         assertStatusBarUnchanged();
     }
+    //@@author
 }

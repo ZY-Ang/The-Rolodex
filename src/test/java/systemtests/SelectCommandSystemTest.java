@@ -121,6 +121,7 @@ public class SelectCommandSystemTest extends RolodexSystemTest {
         assertStatusBarUnchanged();
     }
 
+    //@@author ZY-Ang
     /**
      * Executes {@code command} and verifies that the command box displays {@code command}, the result display
      * box displays {@code expectedResultMessage} and the model related components equal to the current model.
@@ -153,4 +154,5 @@ public class SelectCommandSystemTest extends RolodexSystemTest {
         assertCommandBoxShowsErrorStyle();
         assertStatusBarUnchanged();
     }
+    //@@author
 }
