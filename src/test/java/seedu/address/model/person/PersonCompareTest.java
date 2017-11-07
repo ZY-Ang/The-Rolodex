@@ -54,6 +54,7 @@ public class PersonCompareTest {
                             person.phoneProperty(),
                             person.emailProperty(),
                             person.addressProperty(),
+                            person.remarkProperty(),
                             person.tagProperty()));
         }
     }

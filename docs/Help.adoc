@@ -1,1 +1,6 @@
 include::UserGuide.adoc[tag=excludeNavbar]
+//@@author ZY-Ang-pages
+++++
+<script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.highlight-5.js"></script>
+++++

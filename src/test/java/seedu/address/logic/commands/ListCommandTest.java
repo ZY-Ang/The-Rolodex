@@ -15,6 +15,9 @@ import static seedu.address.logic.parser.CliSyntax.SORT_ARGUMENT_NAME_DESCENDING
 import static seedu.address.logic.parser.CliSyntax.SORT_ARGUMENT_PHONE_ASCENDING;
 import static seedu.address.logic.parser.CliSyntax.SORT_ARGUMENT_PHONE_DEFAULT;
 import static seedu.address.logic.parser.CliSyntax.SORT_ARGUMENT_PHONE_DESCENDING;
+import static seedu.address.logic.parser.CliSyntax.SORT_ARGUMENT_REMARK_ASCENDING;
+import static seedu.address.logic.parser.CliSyntax.SORT_ARGUMENT_REMARK_DEFAULT;
+import static seedu.address.logic.parser.CliSyntax.SORT_ARGUMENT_REMARK_DESCENDING;
 import static seedu.address.testutil.TypicalPersons.getTypicalRolodex;
 
 import java.util.ArrayList;
@@ -50,6 +53,10 @@ public class ListCommandTest {
     private ListCommand listCommandAddressDefault;
     private ListCommand listCommandAddressDescending;
     private ListCommand listCommandAddressAscending;
+    private ListCommand listCommandRemarkDefault;
+    private ListCommand listCommandRemarkDescending;
+    private ListCommand listCommandRemarkAscending;
+
 
     @Before
     public void setUp() {
@@ -86,6 +93,13 @@ public class ListCommandTest {
         listCommandAddressDescending.setData(model, new CommandHistory(), new UndoRedoStack());
         listCommandAddressAscending = new ListCommand(Arrays.asList(SORT_ARGUMENT_ADDRESS_ASCENDING));
         listCommandAddressAscending.setData(model, new CommandHistory(), new UndoRedoStack());
+
+        listCommandRemarkDefault = new ListCommand(Arrays.asList(SORT_ARGUMENT_REMARK_DEFAULT));
+        listCommandRemarkDefault.setData(model, new CommandHistory(), new UndoRedoStack());
+        listCommandRemarkDescending = new ListCommand(Arrays.asList(SORT_ARGUMENT_REMARK_DESCENDING));
+        listCommandRemarkDescending.setData(model, new CommandHistory(), new UndoRedoStack());
+        listCommandRemarkAscending = new ListCommand(Arrays.asList(SORT_ARGUMENT_REMARK_ASCENDING));
+        listCommandRemarkAscending.setData(model, new CommandHistory(), new UndoRedoStack());
     }
     //@@author
 
@@ -173,4 +187,22 @@ public class ListCommandTest {
         assertCommandSuccess(listCommandAddressAscending, model, ListCommand.MESSAGE_SUCCESS, expectedModel);
     }
     //@@author
+
+    @Test
+    public void executeListIsSortedByRemarkDefaultShowsSorted() {
+        sortAllPersons(expectedModel, SORT_ARGUMENT_REMARK_DEFAULT);
+        assertCommandSuccess(listCommandRemarkDefault, model, ListCommand.MESSAGE_SUCCESS, expectedModel);
+    }
+
+    @Test
+    public void executeListIsSortedByRemarkDescendingShowsSorted() {
+        sortAllPersons(expectedModel, SORT_ARGUMENT_REMARK_DESCENDING);
+        assertCommandSuccess(listCommandRemarkDescending, model, ListCommand.MESSAGE_SUCCESS, expectedModel);
+    }
+
+    @Test
+    public void executeListIsSortedByRemarkAscendingShowsSorted() {
+        sortAllPersons(expectedModel, SORT_ARGUMENT_REMARK_ASCENDING);
+        assertCommandSuccess(listCommandRemarkAscending, model, ListCommand.MESSAGE_SUCCESS, expectedModel);
+    }
 }

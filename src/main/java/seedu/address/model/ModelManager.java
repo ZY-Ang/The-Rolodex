@@ -16,6 +16,7 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import seedu.address.commons.core.ComponentManager;
 import seedu.address.commons.core.LogsCenter;
+import seedu.address.commons.core.index.Index;
 import seedu.address.commons.events.model.RolodexChangedEvent;
 import seedu.address.logic.parser.SortArgument;
 import seedu.address.model.person.Person;
@@ -113,6 +114,13 @@ public class ModelManager extends ComponentManager implements Model {
 
     //@@author ZY-Ang
     //=========== Latest Person List Accessors =============================================================
+
+    /**
+     * Returns the index of the given person
+     */
+    public Index getIndex(ReadOnlyPerson target) {
+        return Index.fromZeroBased(sortedPersons.indexOf(target));
+    }
 
     /**
      * Returns an unmodifiable view of the list of {@code ReadOnlyPerson} backed by the internal list of

@@ -73,7 +73,7 @@ public class Name {
 
     //@@author ZY-Ang
     public int compareTo(Name other) {
-        return toString().compareTo(other.toString());
+        return toString().toLowerCase().compareTo(other.toString().toLowerCase());
     }
     //@@author
 
