@@ -76,6 +76,7 @@ public class AddCommandParser implements Parser<AddCommand> {
         return Stream.of(prefixes).allMatch(prefix -> argumentMultimap.getValue(prefix).isPresent());
     }
 
+    //@@author ZY-Ang
     /**
      * Returns a formatted argument string given unformatted {@code rawArgs}
      * or a {@code null} {@code String} if not formattable.
@@ -155,5 +156,6 @@ public class AddCommandParser implements Parser<AddCommand> {
 
         return buildParsedArguments(name, phone, email, remark, address, tags.toString());
     }
+    //@@author
 
 }

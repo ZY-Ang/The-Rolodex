@@ -36,6 +36,7 @@ public class EmailCommandParser implements Parser<EmailCommand> {
         }
     }
 
+    //@@author ZY-Ang
     /**
      * Returns a formatted argument string given unformatted
      * {@code commandWord} and {@code rawArgs}
@@ -55,5 +56,6 @@ public class EmailCommandParser implements Parser<EmailCommand> {
         }
         return null;
     }
+    //@@author
 
 }
