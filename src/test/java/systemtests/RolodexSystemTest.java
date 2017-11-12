@@ -225,16 +225,16 @@ public abstract class RolodexSystemTest {
         StatusBarFooterHandle handle = getStatusBarFooter();
         assertEquals(handle.getSaveLocation(), expectedSaveLocation);
     }
-    //@@author
 
     /**
-     * Asserts that the undo redo stack has been cleared on a successful
+     * Asserts that the undo redo stack has been cleared.
      */
     protected void assertUndoRedoStackCleared() {
         UndoRedoStack undoRedoStack = getUndoRedoStack();
         assertFalse(undoRedoStack.canUndo());
         assertFalse(undoRedoStack.canRedo());
     }
+    //@@author
 
     /**
      * Asserts that only the sync status in the status bar was changed to the timing of

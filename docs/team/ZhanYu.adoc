@@ -13,9 +13,10 @@ ifndef::env-github[]
 include::../../README.adoc[tag=applicationDescription]
 
 *Code contributed*:
+
 * https://github.com/CS2103AUG2017-W11-B2/main/blob/master/collated/main/ZY-Ang.md[Functional Code]
 * https://github.com/CS2103AUG2017-W11-B2/main/blob/master/collated/test/ZY-Ang.md[Tests]
-* https://github.com/CS2103AUG2017-W11-B2/main/blob/master/collated/docs/ZY-Ang-pages.md[Pages]
+* https://github.com/CS2103AUG2017-W11-B2/main/blob/master/collated/docs/ZY-Ang.md[Pages]
 
 === Enhancement Added: Find by close words (fuzzy searching) and find by tags
 
@@ -119,6 +120,30 @@ web browsers. Implementing a search feature in the help window will allow the us
 ---
 
 include::../DeveloperGuide.adoc[leveloffset=2,tag=helpWindowHighlight]
+
+---
+
+=== Enhancement Added: Suggesting Commands for Typos
+
+==== External behavior
+
+---
+
+include::../UserGuide.adoc[leveloffset=2,tag=suggestion]
+include::../UserGuide.adoc[leveloffset=2,tag=suggestion]
+
+---
+
+==== Justification
+
+Users may find it too much of a hassle to remember many of the syntaxes required by Rolodex such as `n/`, `r/`, etc.
+Suggesting commands for such occasions would give the user a shallow learning curve and improve user experience significantly.
+
+==== Implementation
+
+---
+
+include::../DeveloperGuide.adoc[leveloffset=2,tag=suggestion]
 
 ---
 

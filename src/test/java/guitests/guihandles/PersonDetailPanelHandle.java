@@ -8,7 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 
 /**
- * A handle for the person detail panel of the App
+ * A handle for the person detail panel of the App.
  */
 public class PersonDetailPanelHandle extends NodeHandle<Node> {
     public static final String PERSON_DETAIL_ID = "#personDetailPanel";
@@ -17,7 +17,7 @@ public class PersonDetailPanelHandle extends NodeHandle<Node> {
     private static final String PHONE_FIELD_ID = "#phone";
     private static final String EMAIL_FIELD_ID = "#email";
     private static final String REMARK_FIELD_ID = "#remark";
-    private static final String TAGS_FIELD_ID = "#tags";
+    private static final String TAGS_FIELD_ID = "#tagsWithBorder";
 
     private Label nameLabel;
     private Label addressLabel;
@@ -65,7 +65,7 @@ public class PersonDetailPanelHandle extends NodeHandle<Node> {
     }
 
     /**
-     * Update tags in person detail panel
+     * Updates tags in person detail panel.
      */
     public void updateTags() {
         Region tagsContainer = getChildNode(TAGS_FIELD_ID);

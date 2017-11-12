@@ -32,7 +32,7 @@ import org.junit.Test;
 import seedu.address.logic.CommandHistory;
 import seedu.address.logic.UndoRedoStack;
 import seedu.address.logic.parser.SortArgument;
-import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.logic.parser.exceptions.ParseArgsException;
 import seedu.address.model.Model;
 import seedu.address.model.ModelManager;
 import seedu.address.model.Rolodex;
@@ -171,9 +171,7 @@ public class FindCommandTest {
         FindCommand command = prepareCommand("Kurz Elle Kunz " + SORT_ARGUMENT_ADDRESS_ASCENDING);
         assertCommandSuccess(command, expectedMessage, Arrays.asList(FIONA, ELLE, CARL));
     }
-    //@@author
 
-    //@@author ZY-Ang
     /**
      * Parses {@code userInput} into a {@code FindCommand}.
      */
@@ -185,7 +183,7 @@ public class FindCommandTest {
 
         try {
             setupArguments(keywords, findKeywordList, sortKeywordList, FindCommand.MESSAGE_USAGE);
-        } catch (ParseException e) {
+        } catch (ParseArgsException e) {
             throw new AssertionError("Unable to parse arguments.", e);
         }
         FindCommand command = new FindCommand(

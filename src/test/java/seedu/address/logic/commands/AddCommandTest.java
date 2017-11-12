@@ -187,6 +187,11 @@ public class AddCommandTest {
         public ReadOnlyRolodex getRolodex() {
             return new Rolodex();
         }
+
+        @Override
+        public Index getIndex(ReadOnlyPerson person) {
+            return Index.fromZeroBased(personsAdded.indexOf(new Person(person)));
+        }
     }
 
 }

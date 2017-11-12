@@ -12,6 +12,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+import seedu.address.commons.core.EventsCenter;
+import seedu.address.commons.events.ui.JumpToListRequestEvent;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.ReadOnlyPerson;
@@ -27,7 +29,7 @@ public class AddCommand extends UndoableCommand {
     public static final Set<String> COMMAND_WORD_ABBREVIATIONS =
             new HashSet<>(Arrays.asList(COMMAND_WORD, "a", "+"));
     //@@author
-    public static final String COMMAND_HOTKEY = "Ctrl+A";
+    public static final String COMMAND_HOTKEY = "Ctrl+Equals";
     public static final String FORMAT = "add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS";
     public static final String[] LIST_OF_FIELDS = {"NAME", "PHONE_NUMBER", "EMAIL", "ADDRESS"};
 
@@ -64,11 +66,19 @@ public class AddCommand extends UndoableCommand {
         requireNonNull(model);
         try {
             model.addPerson(toAdd);
+            jumpToAddedPerson(toAdd);
             return new CommandResult(String.format(MESSAGE_SUCCESS, toAdd));
         } catch (DuplicatePersonException e) {
             throw new CommandException(MESSAGE_DUPLICATE_PERSON);
         }
 
+    }
+
+    /**
+     * Jumps to the {@code addedPerson} in the person list.
+     */
+    private void jumpToAddedPerson(ReadOnlyPerson addedPerson) {
+        EventsCenter.getInstance().post(new JumpToListRequestEvent(model.getIndex(addedPerson)));
     }
 
     @Override

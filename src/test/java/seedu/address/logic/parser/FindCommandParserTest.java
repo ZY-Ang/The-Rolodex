@@ -66,6 +66,6 @@ public class FindCommandParserTest {
         assertEquals(" some args", FindCommandParser.parseArguments("some args"));
         assertEquals(" some args", FindCommandParser.parseArguments("    some args"));
     }
-    //@@author
 
+    //@@author
 }

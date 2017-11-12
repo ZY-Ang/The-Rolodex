@@ -20,8 +20,8 @@ public class DeleteCommand extends UndoableCommand {
     //@@author ZY-Ang
     public static final Set<String> COMMAND_WORD_ABBREVIATIONS =
             new HashSet<>(Arrays.asList(COMMAND_WORD, "d", "-"));
-    //@@author
-    public static final String COMMAND_HOTKEY = "Ctrl+Shift+D";
+    public static final String COMMAND_HOTKEY = "Ctrl+D";
+    public static final String COMMAND_HOTKEY_ALTERNATIVE = "Ctrl+Minus";
     public static final String FORMAT = "delete INDEX";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD

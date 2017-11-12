@@ -1,5 +1,6 @@
 package seedu.address.logic.parser;
 
+import static junit.framework.TestCase.assertEquals;
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.address.logic.commands.CommandTestUtil.ADDRESS_DESC_AMY;
 import static seedu.address.logic.commands.CommandTestUtil.ADDRESS_DESC_BOB;
@@ -35,11 +36,14 @@ import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
 import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
 import static seedu.address.testutil.TypicalIndexes.INDEX_THIRD_PERSON;
 
+import java.lang.reflect.Method;
+
 import org.junit.Test;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.EditCommand;
 import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;
+import seedu.address.model.ModelManager;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
@@ -219,4 +223,16 @@ public class EditCommandParserTest {
 
         assertParseSuccess(parser, userInput, expectedCommand);
     }
+
+    //@@author ZY-Ang
+    @Test
+    public void parseArgumentsIndexInArgumentsReturnsArguments() throws Exception {
+        Method setLastRolodexSize = ModelManager.class.getDeclaredMethod("setLastRolodexSize", Integer.TYPE);
+        setLastRolodexSize.setAccessible(true);
+        setLastRolodexSize.invoke(null, 1);
+        assertEquals(" 1 n/Bob Choo", EditCommandParser.parseArguments("edit", "-1 n/Bob Choo"));
+        setLastRolodexSize.invoke(null, 8);
+        assertEquals(" 8 n/someStringV4lue", EditCommandParser.parseArguments("modify", "8someStringV4lue"));
+    }
+    //@@author
 }

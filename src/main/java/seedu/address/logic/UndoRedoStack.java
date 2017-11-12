@@ -20,10 +20,14 @@ public class UndoRedoStack {
         redoStack = new Stack<>();
     }
 
+    //@@author ZY-Ang
     public UndoRedoStack(UndoRedoStack toBeCopied) {
-        undoStack = (Stack<UndoableCommand>) toBeCopied.undoStack.clone();
-        redoStack = (Stack<UndoableCommand>) toBeCopied.redoStack.clone();
+        undoStack = new Stack<>();
+        redoStack = new Stack<>();
+        undoStack.addAll(toBeCopied.undoStack);
+        redoStack.addAll(toBeCopied.redoStack);
     }
+    //@@author
 
     /**
      * Pushes {@code command} onto the undo-stack if it is of type {@code UndoableCommand}. Clears the redo-stack
