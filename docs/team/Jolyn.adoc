@@ -16,7 +16,11 @@ include::../../README.adoc[tag=applicationDescription]
 
 === Enhancement Added: Keyboard Shortcuts
 
-The table below shows the keyboard shortcuts that are added, with the exception of shortcuts with the behavior `Exit the application`
+==== Justification
+
+Having keyboard shortcuts allows the user to navigate around the application with ease and speed.
+This implementation should enable you to access all parts of Rolodex without using the mouse.
+The table below shows the keyboard shortcuts that have been added, with the exception of shortcuts with the behavior `Exit the application`
 and `View help window` which came with the original state of the application.
 
 ==== External Behavior
@@ -25,70 +29,54 @@ and `View help window` which came with the original state of the application.
 
 include::../UserGuide.adoc[leveloffset=2,tag=shortcut]
 
+
+==== Implementation
+
 ---
+
+include::../DeveloperGuide.adoc[leveloffset=1, tag=shortcut]
+
+---
+
+=== Enhancement Added: UI Improvements
+
+---
+
+include::../DeveloperGuide.adoc[leveloffset=1, tag=uiImprovements]
+
+---
+
+[[detailPanel]]
+=== Enhancement Added: Person Detail Panel
 
 ==== Justification
 
-The main objective of Rolodex is to facilitate an efficient way of managing contacts for users with a preference for typing.
-Having keyboard shortcuts allows the user to navigate around the application with ease and speed.
-This implementation should enable the user to access all parts of the application without using the mouse.
-
-==== Implementation
-
----
-
-include::../DeveloperGuide.adoc[leveloffset=2, tag=shortcut]
-
----
-
-=== Enhancement Added: Renovate UI Color Scheme and Layout
-
-The user interface of the application has been revamped to take on a clean design, which aims to improve
-the user's experience with Rolodex.
+The person detail panel aims to reduce cluttering of information in the contact list. With this panel,
+the contact list will only have to store the essential information for identifying a person, whilst
+additional information about the person will be displayed on this panel.
 
 ==== External Behavior
 
 ---
 
-image::Ui.png[width="800"]
-
-Some features of the UI:
-
-* A keyboard icon in the command box provides visual feedback for certain user events:
-
-** image:keyboard.png[width="30"] : User is idle
-** image:keyboardTyping.png[width="30"] : User is typing
-** image:keyboardError.png[width="30"] : User entered an invalid command
-
-* Split pane which separates the contact list from the other UI components is responsive;
-the divider is automatically maintained at the optimal position
-when window size changes
-* Avatar colors are randomized
-
----
-
-=== Enhancement Added: Person Detail Panel
-
-==== External Behavior
-
----
-
-include::../DeveloperGuide.adoc[leveloffset=2, tag=detailPanelBehavior]
+include::../DeveloperGuide.adoc[leveloffset=1, tag=detailPanelBehavior]
 
 
 ==== Implementation
 
 ---
 
-include::../DeveloperGuide.adoc[leveloffset=2, tag=detailPanelImp]
+include::../DeveloperGuide.adoc[leveloffset=1, tag=detailPanelImp]
 
 ---
 
 === Enhancement Added: Remark Field
 
-The remark field allows the user to store miscellaneous notes about their contacts. The field can be added using a standalone `remark` command,
-or added along with other fields when adding a new person using the existing `add` command. Similarly, the field can be modified with the `remark` command,
-or edited along with other fields using the existing `edit` command.
+==== Justification
+
+The remark field allows the user to store miscellaneous notes about their contacts.
+For example, a user might want to note down a hobby of a friend. Such information can be easily added to the contact
+with the remark field.
 
 ==== External Behavior
 
@@ -109,12 +97,14 @@ include::../UserGuide.adoc[leveloffset=2, tag=picture]
 
 ---
 === Other contributions
-* Added auto-selection to person that is newly added (Pull request https://github.com/CS2103AUG2017-W11-B2/main/pull/123[#123])
-* Added auto-selection to person that is newly edited (Pull request https://github.com/CS2103AUG2017-W11-B2/main/pull/102[#102])
+* Imported the Segoe UI font pack into the application (Pull request https://github.com/CS2103AUG2017-W11-B2/main/pull/136[#136])
+* Added a prompt text to the result display panel (Pull request https://github.com/CS2103AUG2017-W11-B2/main/pull/122[#122])
 * Added the removeTag method (Pull request https://github.com/CS2103AUG2017-W11-B2/main/pull/6[#6])
 * Updated the General Documentation (Pull requests https://github.com/CS2103AUG2017-W11-B2/main/pull/2[#2],
 https://github.com/CS2103AUG2017-W11-B2/main/pull/66[#66],
-https://github.com/CS2103AUG2017-W11-B2/main/pull/112[#112])
+https://github.com/CS2103AUG2017-W11-B2/main/pull/112[#112],
+https://github.com/CS2103AUG2017-W11-B2/main/pull/124[#124],
+https://github.com/CS2103AUG2017-W11-B2/main/pull/134[#134])
 
 endif::[]
 

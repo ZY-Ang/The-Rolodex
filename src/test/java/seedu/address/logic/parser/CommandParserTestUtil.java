@@ -14,13 +14,14 @@ import seedu.address.logic.commands.ClearCommand;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.DeleteCommand;
 import seedu.address.logic.commands.EditCommand;
+import seedu.address.logic.commands.EmailCommand;
 import seedu.address.logic.commands.ExitCommand;
 import seedu.address.logic.commands.FindCommand;
 import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.HistoryCommand;
 import seedu.address.logic.commands.ListCommand;
-import seedu.address.logic.commands.NewCommand;
-import seedu.address.logic.commands.OpenCommand;
+import seedu.address.logic.commands.NewRolodexCommand;
+import seedu.address.logic.commands.OpenRolodexCommand;
 import seedu.address.logic.commands.RedoCommand;
 import seedu.address.logic.commands.SelectCommand;
 import seedu.address.logic.commands.StarWarsCommand;
@@ -39,13 +40,14 @@ public class CommandParserTestUtil {
             ClearCommand.COMMAND_WORD_ABBREVIATIONS,
             DeleteCommand.COMMAND_WORD_ABBREVIATIONS,
             EditCommand.COMMAND_WORD_ABBREVIATIONS,
+            EmailCommand.COMMAND_WORD_ABBREVIATIONS,
             ExitCommand.COMMAND_WORD_ABBREVIATIONS,
             FindCommand.COMMAND_WORD_ABBREVIATIONS,
             HelpCommand.COMMAND_WORD_ABBREVIATIONS,
             HistoryCommand.COMMAND_WORD_ABBREVIATIONS,
             ListCommand.COMMAND_WORD_ABBREVIATIONS,
-            NewCommand.COMMAND_WORD_ABBREVIATIONS,
-            OpenCommand.COMMAND_WORD_ABBREVIATIONS,
+            NewRolodexCommand.COMMAND_WORD_ABBREVIATIONS,
+            OpenRolodexCommand.COMMAND_WORD_ABBREVIATIONS,
             RedoCommand.COMMAND_WORD_ABBREVIATIONS,
             SelectCommand.COMMAND_WORD_ABBREVIATIONS,
             UndoCommand.COMMAND_WORD_ABBREVIATIONS,
